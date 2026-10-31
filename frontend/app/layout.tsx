@@ -4,5 +4,5 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 export const metadata: Metadata = { title: 'AI-DMC | CoE AIIS', description: 'Pengelolaan dan verifikasi dokumen dosen CoE AIIS.' };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="id"><body className={inter.className}>{children}</body></html>;
+  return <html lang="id" className={inter.className}><body>{children}</body></html>;
 }

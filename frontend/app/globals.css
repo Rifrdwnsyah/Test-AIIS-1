@@ -9,3 +9,4 @@
 
 /* Modal content stays readable over document text. */
 .modal.glass{background:var(--glass-border)}
+body{font-feature-settings:"cv11","ss01","ss03";-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
