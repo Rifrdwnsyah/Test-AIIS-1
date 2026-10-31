@@ -11,7 +11,7 @@ export function Confidence({ value, needsReview = false }: { value?: number | nu
   const low = value < threshold || needsReview;
   return <div className="confidence"><div><span>Keyakinan AI {Math.round(value * 100)}%</span><span className="confidence-track"><span style={{ width: `${Math.min(100, Math.max(0, value * 100))}%` }} className={low ? 'low' : ''} /></span></div>{low && <p>AI kurang yakin, mohon dicek.</p>}</div>;
 }
-export function Empty({ text, children }: { text: string; children?: React.ReactNode }) { return <div className="empty"><FileText size={32} strokeWidth={1.75} aria-hidden="true" /><p>{text}</p>{children}</div>; }
+export function Empty({ text, children, title }: { text: string; children?: React.ReactNode; title?: string }) { return <div className="empty"><span className="app-icon"><FileText size={24} strokeWidth={1.75} aria-hidden="true" /></span>{title && <h2>{title}</h2>}<p>{text}</p>{children}</div>; }
 export function ErrorMessage({ message }: { message: string }) { return message ? <p className="error-message" role="alert"><CircleAlert size={18} aria-hidden="true" />{message}</p> : null; }
 export function Modal({ title, children, onClose, wide = false }: { title: string; children: React.ReactNode; onClose: () => void; wide?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
