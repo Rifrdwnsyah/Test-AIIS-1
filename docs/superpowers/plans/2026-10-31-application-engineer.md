@@ -10,16 +10,16 @@ The user approved the design on 31 October 2026. Execute backend and frontend in
 
 ## Tasks
 
-- [ ] Foundation: .gitignore excludes real documents, local storage and secrets. Copy the supplied design skill. Compose starts db/backend/frontend; examples contain development values only.
-- [ ] Database: backend/app/models plus Alembic migration create the five defined tables, seed two dummy lecturers and one admin, enforce append-only audit writes.
-- [ ] Authentication: Argon2 passwords, expiring JWT, protected routes, audited login. Test missing/invalid token and separate lecturer access.
-- [ ] Upload: stream and validate each file, limit 20 MB, SHA-256 deduplication, UUID storage, safe duplicate responses. Test accepted formats and invalid/oversized inputs.
-- [ ] Pipeline adapter: explicit mock high/low/failure scenarios; validate result and map fields/lecturers. Test confidence at exactly 0.85, low score and failure.
-- [ ] Document API: list/filter/detail/file with ownership or lecturer links and confidential owner restriction. Test cross-account reads/mutations, correction snapshots and export admin restrictions.
-- [ ] Frontend: four connected pages, shared design tokens and navigation, upload polling, review/correction/preview, archive filters, delayed approve/reject for undo. Run TypeScript check and production build.
+- [x] Foundation: .gitignore excludes real documents, local storage and secrets. Copy the supplied design skill. Compose starts db/backend/frontend; examples contain development values only.
+- [x] Database: backend/app/models plus Alembic migration create the five defined tables, seed two dummy lecturers and one admin, enforce append-only audit writes.
+- [x] Authentication: Argon2 passwords, expiring JWT, protected routes, audited login. Test missing/invalid token and separate lecturer access.
+- [x] Upload: stream and validate each file, limit 20 MB, SHA-256 deduplication, UUID storage, safe duplicate responses. Test accepted formats and invalid/oversized inputs.
+- [x] Pipeline adapter: explicit mock high/low/failure scenarios; validate result and map fields/lecturers. Test confidence at exactly 0.85, low score and failure.
+- [x] Document API: list/filter/detail/file with ownership or lecturer links and confidential owner restriction. Test cross-account reads/mutations, correction snapshots and export admin restrictions.
+- [x] Frontend: four connected pages, shared design tokens and navigation, upload polling, review/correction/preview, archive filters, delayed approve/reject for undo. Run TypeScript check and production build.
 - [x] Wireframes: save four desktop and four mobile PNG layout references under docs/wireframe; these are design references rather than screenshots of the application.
-- [ ] Integration: inspect shared API contract, run meaningful backend tests and frontend build, check 375/1280 px if browser runtime is available, record real limitations.
-- [ ] Delivery: root/backend/frontend READMEs, one-page lecturer guide, checklist distinguishing local implementation from external handoffs.
+- [x] Integration: inspect shared API contract, run meaningful backend tests and frontend build, check 375/1280 px if browser runtime is available, record real limitations.
+- [x] Delivery: root/backend/frontend READMEs, one-page lecturer guide, checklist distinguishing local implementation from external handoffs.
 
 ## Verification commands
 
