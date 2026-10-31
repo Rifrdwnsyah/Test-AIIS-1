@@ -58,8 +58,8 @@
 
 /* Modal content stays readable over document text. */
 .modal.glass{background:var(--glass-border)}
-body{font-feature-settings:"cv11","ss01","ss03";-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-/* Typography and layout — skill v2. */
+body{font-family:var(--font-inter);font-feature-settings:"cv11","ss01","ss03";-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+/* Typography and layout â€” skill v2. */
 h1{font-size:44px;font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-bottom:8px}
 h2{font-size:22px;font-weight:600;letter-spacing:-.015em;line-height:1.25}
 .main{padding-top:48px}.page-heading{margin:0 0 32px}.page-heading p{font-size:17px;font-weight:400;color:var(--ink-3);line-height:1.45}
