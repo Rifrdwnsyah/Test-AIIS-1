@@ -16,7 +16,10 @@ services:
 
   backend:
     build:
-      context: ./backend
+      context: .
+      dockerfile: backend/Dockerfile
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
     env_file: .env
     ports:
       - '127.0.0.1:${BACKEND_PORT:-8000}:8000'

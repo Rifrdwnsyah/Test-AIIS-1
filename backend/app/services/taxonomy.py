@@ -14,7 +14,7 @@ def load_taxonomy():
         return {'source': 'demo', 'categories': DEMO}
     try:
         value = json.loads(settings.taxonomy_path.read_text(encoding='utf-8'))
-        categories = value['categories'] if isinstance(value, dict) else value
+        categories = value.get('categories', value.get('kategori')) if isinstance(value, dict) else value
         for category in categories:
             assert category['kode'] and category['nama'] and isinstance(category['subkategori'], list)
             for sub in category['subkategori']:
