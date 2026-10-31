@@ -57,6 +57,13 @@ class PipelineResult(BaseModel):
     waktu_proses_detik: float | None = Field(default=None, ge=0)
     error: str | None = None
 
+    @model_validator(mode='before')
+    @classmethod
+    def normalize_failed_classification(cls, value):
+        if isinstance(value, dict) and value.get('status') == 'gagal' and value.get('klasifikasi') == {'kategori': None, 'subkategori': None, 'jenis': None}:
+            return {**value, 'klasifikasi': None}
+        return value
+
     @model_validator(mode='after')
     def complete_success(self):
         if self.status == 'sukses' and any(v is None for v in (self.jenis_berkas, self.klasifikasi, self.skor_keyakinan, self.metadata)):

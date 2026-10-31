@@ -19,3 +19,4 @@ playwright-report/
 *.tsbuildinfo
 .uv-cache/
 .test-tmp*/
+pipeline/eval/hasil/

@@ -4,6 +4,8 @@ Aplikasi pengelolaan dokumen CoE AIIS. Checkout ini mengerjakan bagian **Orang 2
 
 **Mode awal adalah mock**, ditampilkan sebagai simulasi pada aplikasi. Berkas tidak benar-benar diklasifikasi AI dalam mode ini.
 
+Branch integrasi menyertakan pipeline Orang 1 dan adapter backend. Ikuti [panduan integrasi dan hasil pengujian](docs/PIPELINE_INTEGRATION.md) untuk mengaktifkan mode real dengan Ollama lokal. Model AI dan OCR langsung masih menjadi tahap pengujian berikutnya.
+
 ## Menjalankan dengan Docker Compose
 
 Prasyarat: Docker Desktop dengan Compose. Dari root proyek:
